@@ -16,3 +16,5 @@ permutasi balikan (<i>invers initial permutation</i> atau IP-1
  # Mode CFB
  - Dalam CFB, data dienkripsikan dalam unit yang lebih kecil daripada ukuran blok.
  - Unit yang dienkripsikan dapat berupa bit per bit (seperti <i>cipher</i> aliran), 2 bit, 3 bit, dst.
+ 
+ wwohh sangar ngene yoo dokumentasi e wkwkwkkw
