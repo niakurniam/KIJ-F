@@ -411,6 +411,69 @@ for data in range(0,len(dataset),3):
 
         return bitlist_ke_str(finalIP)
 
+    def dekripsi (hasilenkripsi):
+        hasil = str_ke_bitlist(hasilenkripsi)
+        CC = fungsi1(hasil, IP)
+        #print CC
+
+        RR0 = CC[:len(CC)/2]
+        LL0 = CC[len(CC)/2:]
+
+        LL1 = RR0
+        RR1 = ulangR(K16, LL0, RR0)
+
+        LL2 = RR1
+        RR2 = ulangR(K15, LL1, RR1)
+
+        LL3 = RR2
+        RR3 = ulangR(K14, LL2, RR2)
+
+        LL4 = RR3
+        RR4 = ulangR(K13, LL3, RR3)
+
+        LL5 = RR4
+        RR5 = ulangR(K12, LL4, RR4)
+
+        LL6 = RR5
+        RR6 = ulangR(K11, LL5, RR5)
+
+        LL7 = RR6
+        RR7 = ulangR(K10, LL6, RR6)
+
+        LL8 = RR7
+        RR8 = ulangR(K9, LL7, RR7)
+
+        LL9 = RR8
+        RR9 = ulangR(K8, LL8, RR8)
+
+        LL10 = RR9
+        RR10 = ulangR(K7, LL9, RR9)
+
+        LL11 = RR10
+        RR11 = ulangR(K6, LL10, RR10)
+
+        LL12 = RR11
+        RR12 = ulangR(K5, LL11, RR11)
+
+        LL13 = RR12
+        RR13 = ulangR(K4, LL12, RR12)
+
+        LL14 = RR13
+        RR14 = ulangR(K3, LL13, RR13)
+
+        LL15 = RR14
+        RR15 = ulangR(K2, LL14, RR14)
+
+        LL16 = RR15
+        RR16 = ulangR(K1, LL15, RR15)
+
+        TTinv = RR16
+        TTinv.extend(LL16)
+
+        TT = fungsi1(TTinv, IPR)
+
+        return bitlist_ke_str(TT)
+
     for index in range(0, len(pesan)):
         print "Iterasi ke-%d : " % index
         b_pesan = str_ke_bitlist(pesan[index])
@@ -431,3 +494,10 @@ for data in range(0,len(dataset),3):
 
         x1 = Sright0 + c1
         IV = bitlist_ke_str(x1);
+        #dibagi1=str_ke_bitlist()
+        hasildekripsi=dekripsi(hasilenkripsi)
+        #test="1234567890abcdef".decode("hex")
+        #hexs=hasilenkripsi.encode("hex")
+        print "hasil dekripsinya adalah", hasildekripsi
+
+        #print "x%d :" % index, IV
