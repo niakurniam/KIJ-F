@@ -87,5 +87,6 @@ Untuk hasil akhir dekripsi pesan.
 ![alt tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%201%20-%20DES%20CFB/Screenshot/output.JPG)
 
 Sumber : http://octarapribadi.blogspot.co.id/2012/10/contoh-enkripsi-dengan-algoritma-des.html
+         https://github.com/toddw-as/pyDes/blob/master/pyDes.py
 
  
