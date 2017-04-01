@@ -53,6 +53,7 @@ for data in range(0,len(dataset),3):
         p_pesan = len(pesan1)
         if p_pesan % end !=0:
             if p_pesan < end :
+
                 c_hur=0
                 while p_pesan<end:
                     pesan1 += '-'
