@@ -478,6 +478,8 @@ for data in range(0,len(dataset),3):
 
         return bitlist_ke_str(TT)
 
+
+
     for index in range(0, len(pesan)):
         print "Iterasi ke-%d : " % index
         b_pesan = str_ke_bitlist(pesan[index])
@@ -505,3 +507,6 @@ for data in range(0,len(dataset),3):
         print "hasil dekripsinya adalah", hasildekripsi
 
         #print "x%d :" % index, IV
+
+    for index in range(0, len(pesan)):
+        print hasil
