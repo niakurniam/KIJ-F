@@ -1,4 +1,4 @@
-1#Konversi String ke bit dan sebaliknya
+#Konversi String ke bit dan sebaliknya
 def str_ke_bitlist(s):
     ords = (ord(c) for c in s)
     shifts = (7, 6, 5, 4, 3, 2, 1, 0)
