@@ -110,6 +110,7 @@ for data in range(0,len(dataset),3):
         #XOR fungsi K1+E(R0)
         fungsi = map(lambda x, y: x^y, key,right0 )
         #print fungsi
+        
         #Fungsi untuk mencari nilai S-box
         sbox = [
                 # S1
