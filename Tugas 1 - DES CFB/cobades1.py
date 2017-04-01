@@ -41,7 +41,7 @@ for data in range(0,len(dataset),3):
     print "pesan : ", pesan1
     print "Key : ", ikey
 
-    #penghitung panjang pesan. 8 berarti 8 karakter
+    #penghitung panjang pesan
     pesan_count = 0
     start = 0
     end = 8
@@ -62,7 +62,7 @@ for data in range(0,len(dataset),3):
         pesan1 = pesan1[end:]
         index -= end
 
-    #key permutation
+    #Fungsi untuk memasukkan permutasi kunci
     def halfK(init, last, Kpermutate):
 
         #H = [8,8,8,8,8,8,8,8, 8,8,8,8,8,8,8,8, 8,8,8,8,8,8,8,8, 8,8,8,8]
@@ -85,16 +85,6 @@ for data in range(0,len(dataset),3):
             tempKey = CD[a]
             nKey[x] = tempKey
         return nKey
-
-    def fungsi1(awal, tabel):
-        hasilIP = [None]*64
-        for x in range(0, len(tabel)):
-            a= tabel[x]-1
-            #print a
-            temp_pesan = awal[a]
-            #print tempKey
-            hasilIP[x] = temp_pesan
-        return hasilIP
 
     def ulangR(key, left, right):
         #expansion permutation
@@ -119,7 +109,7 @@ for data in range(0,len(dataset),3):
         #XOR fungsi K1+E(R0)
         fungsi = map(lambda x, y: x^y, key,right0 )
         #print fungsi
-
+        #Fungsi untuk mencari nilai S-box
         sbox = [
                 # S1
                 [14, 4, 13, 1, 2, 15, 11, 8, 3, 10, 6, 12, 5, 9, 0, 7,
@@ -195,7 +185,8 @@ for data in range(0,len(dataset),3):
 
             pos += 4
             j += 1
-
+    #Setelah didapatkan nilai vektor Bi, langkah selanjutnya adalah memutasikan bit vektor Bi menggunakan tabel P-Box,
+    #kemudian dikelompokkan menjadi 4 blok dimana tiap-tiap blok memiliki 32 bit data.
         P = [16,   7,  20,  21]
         P.extend( [29,  12,  28,  17] )
         P.extend([ 1,  15,  23,  26])
@@ -323,6 +314,17 @@ for data in range(0,len(dataset),3):
     K16 = newKey(PC2, C16, D16)
 
 
+     #fungsi untuk melakukan permutasi pada plain text
+    def fungsi1(awal, tabel):
+        hasilIP = [None]*64
+        for x in range(0, len(tabel)):
+            a= tabel[x]-1
+            #print a
+            temp_pesan = awal[a]
+            #print tempKey
+            hasilIP[x] = temp_pesan
+        return hasilIP
+    #Tabel Permutasi Pesan
     IP = [58,    50,   42,    34,    26,   18,    10,    2]
     IP.extend( [60,    52,   44,    36,    28,   20,    12,    4] )
     IP.extend([62,    54,   46,    38,    30,   22,    14,    6])
@@ -331,7 +333,7 @@ for data in range(0,len(dataset),3):
     IP.extend([59,    51,   43,    35,    27,   19,    11,    3])
     IP.extend([61,    53,   45,    37,    29,   21,    13,    5])
     IP.extend([63,    55,   47,    39,    31,   23,    15,    7])
-
+    #Tabel Penggabungan Terakhir tabel Invers Initial Permutasi
     IPR = [
         40, 8,  48, 16, 56, 24, 64, 32,
         39, 7,  47, 15, 55, 23, 63, 31,
