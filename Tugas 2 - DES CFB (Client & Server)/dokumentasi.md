@@ -7,11 +7,11 @@ Pada tugas kali ini, kami akan mendemonstrasikan implementasi algoritma DES deng
 4. setelah itu masukkan plain text atau pesan yang akan anda kirim.
 
 dari sisi enkripsinya, alurnya sebagai berikut:
-1. setelah key dan plain text nya dimasukkan, maka key dan text tersebut akan disimpan dalam file txt.
+1. setelah key dan plain text nya dimasukkan, maka key dan text tersebut akan disimpan dalam file pesan.txt dan key.txt.
 2. kemudian setelah tersimpan di file txt, maka file akan dieksekusi dalam file cobades1.py, dimana enkripsi akan dilakukan
-3. setelah dienkripsi oleh file cobades1.py, maka hasil dari enkripsi tersebut akan disimpan kembai dalam file txt
-4. lalu dari file txt hasil enkripsi terebut akan dikirim ke server.
-5. sebelum diterima oleh server, data dari txt hasil enkripsi, akan didekripsi kembali dengan menggunakan key yang sama, sehingga pesan dapat dibaca oleh server.
+3. setelah dienkripsi oleh file cobades1.py, maka hasil dari enkripsi tersebut akan disimpan kembai dalam file hasilenkrip.txt
+4. lalu dari file hasilenkrip.txt hasil enkripsi terebut akan dikirim ke server.
+5. sebelum diterima oleh server, data dari hasilenkrip.txt hasil enkripsi, akan didekripsi kembali dengan menggunakan key yang sama, sehingga pesan dapat dibaca oleh server.
 6. setelah didecrypt, maka dari sisi server akan mengambil teks hasil dekripsi tadi. dan teks tersampaikan pada sisi server.
 
 alur tersebut juga berlaku pada sis server, hanya berkebalikan saja.
