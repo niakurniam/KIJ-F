@@ -1,5 +1,5 @@
 ## Tahapan Pengerjaan
-Pada tugas kali ini, kami akan mendemonstrasikan implementasi algoritma DES dengan sistem client server. alurnya sebagai berikut:
+Pada tugas kali ini, kami akan mendemonstrasikan implementasi algoritma DES dengan sistem client server. sebelumnya kami akan menjelaskan apa itu client dan server. Client-server adalah suatu bentuk arsitektur, dimana client adalah perangkat yang menerima yang akan menampilkan dan menjalankan aplikasi (software komputer) dan server adalah perangkat yang menyediakan dan bertindak sebagai pengelola aplikasi, data, dan keamanannya. alurnya sebagai berikut:
 
 1. awalnya setting host dan port dari client dan server
 2. kemudian jalankan server-nya terlebih dahulu, baru clientnya.
@@ -14,7 +14,7 @@ dari sisi enkripsinya, alurnya sebagai berikut:
 5. sebelum diterima oleh server, data dari hasilenkrip.txt hasil enkripsi, akan didekripsi kembali dengan menggunakan key yang sama, sehingga pesan dapat dibaca oleh server.
 6. setelah didecrypt, maka dari sisi server akan mengambil teks hasil dekripsi tadi. dan teks tersampaikan pada sisi server.
 
-alur tersebut juga berlaku pada sis server, hanya berkebalikan saja.
+alur tersebut juga berlaku pada sisi server, hanya berkebalikan saja.
 
 sumber: 
 1. https://security.stackexchange.com/questions/7390/how-to-properly-encrypt-a-communication-channel-between-a-client-and-a-server-w
