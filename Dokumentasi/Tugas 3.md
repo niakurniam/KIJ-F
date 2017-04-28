@@ -26,16 +26,16 @@
 
 ![alt tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%203%20Diffie%20Hillman/Screenshot/gambar1.JPG)
 
-2. Kemudian hasil dari private key diterima oleh client dalam bentuk format txt. Dan mendapatkan shared key dari hasil perhitungan algoritma Diffie-Hellman
+2. Kemudian menghitung private key, lalu hasil private key disimpan dalam file txt. 
 
 ![alt tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%203%20Diffie%20Hillman/Screenshot/gambar2.JPG)
 
-3. Ketika memasukkan pesan, maka pesan tersebut akan disimpan di dataset.txt. Lalu mengeksekusi hasil enkripsi.py untuk melakukan proses enkripsi pesan tersebut. Dan hasil enkripsi itu nantinya akan disimpan di enkripsi.txt
+3. Setelah itu, server akan membaca hasil dari client_key.txt. Lalu menghitung shared key dan hasil shared key disimpan ke file txt.
 
 ![alt tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%203%20Diffie%20Hillman/Screenshot/gambar3.JPG)
 
-4. Kemudian hasil enkripsi, didekripsi dan hasil dekripsi disimpan di dekripsi.txt
+4. Pesan dari client dienkripsi dan disimpan ke file enkripsi.txt, lalu mengeksekusi file dekripsi.py untuk memproses hasil dekripsi pesan. Setelah itu hasil dekripsi disimpan ke file dekripsi.txt.
 
 ![alt tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%203%20Diffie%20Hillman/Screenshot/gambar4.JPG)
 
-
+5. 
