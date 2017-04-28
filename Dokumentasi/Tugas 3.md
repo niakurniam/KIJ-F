@@ -38,4 +38,13 @@
 
 ![alt tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%203%20Diffie%20Hillman/Screenshot/gambar4.JPG)
 
-5. 
+### Client
+1. Setting dari client
+
+![alt tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%203%20Diffie%20Hillman/Screenshot/gambar5.JPG)
+
+2. Menghitung private key. Kemudian hasil dari perhitungan private key disimpan di client_key.txt dan server_key.txt harus memiliki isi yang sama dengan file client_key.txt. Setelah itu kita bisa mendapatkan shared key-nya
+
+![alt tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%203%20Diffie%20Hillman/Screenshot/gambar6.JPG)
+
+
