@@ -47,4 +47,10 @@
 
 ![alt tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%203%20Diffie%20Hillman/Screenshot/gambar6.JPG)
 
+3. File dataset.txt adalah untuk menyimpan sebuah pesan. Kemudian eksekusi enkripsi.py untuk mengenkripsi pesan tersebut. Setelah itu hasil enkripsi disimpan di enkripsi.txt. Selanjutnya, hasil enkripsi didekripsi dan hasil dekripsi disimpan dalam bentuk file txt
 
+![alt tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%203%20Diffie%20Hillman/Screenshot/gambar7.JPG)
+
+4. Berikut ini adalah hasil peritungan dari Diffie-Hellman
+
+![alt tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%203%20Diffie%20Hillman/Screenshot/gambar8.JPG)
