@@ -8,7 +8,7 @@ server_socket.bind(server_address)
 server_socket.listen(2)
 
 if (len(sys.argv) < 4):
-    print 'Usage : python server.py prime_number intiger_number private_number'
+    print 'Usage : python server.py prime_number integer_number private_number'
     sys.exit()
 
 p_number = int(sys.argv[1])
