@@ -1,4 +1,0 @@
-# Tugas 4 - RSA
-
-## Pendahuluan
-RSA Cipher atau kriptografi kunci publik merupakan salah satu kriptografi asimetris, dimana kunci untuk melakukan enkripsi dan dekripsi berbeda. Nama RSA diambil dari inisial orang yang menciptakannya yaitu, Ron Rivest, Adi Shamir, dan Leonard Adleman, dan dipublikasikan pada jurnal ilmiah Communication of ACM tahun 1977. Kekuatan utama dari RSA adalah kesulitan
