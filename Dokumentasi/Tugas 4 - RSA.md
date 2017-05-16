@@ -15,7 +15,68 @@ Langkah-langkah dalam mengenkripsi atau mendekripsi RSA adalah sebagai berikut :
 8. Fungsi dekripsi: ![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/rumus2.JPG); dimana ca merupakan karakter ke-a dari ciphertext yang akan didekripsikan.
 
 ## Hasil Implementasi
-### Server
-1. 
-
 ### Client
+1. Import library pickle dan tambahkan fungsi-fungsi sebagai converter.
+
+![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar1.JPG);
+
+![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar2.JPG);
+
+![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar3.JPG);
+
+2. Buatlah fungsi multiplicative inverse untuk mencari nilai private key.
+
+![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar4.JPG);
+
+3. Buatlah fungsi untuk mendapatkan key-nya.
+
+![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar5.JPG);
+
+4. Buatlah fungsi untuk mengenkripsi dan mendekripsi pesan.
+
+![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar6.JPG);
+
+5. 
+
+![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar7.JPG);
+
+6. 
+
+![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar8.JPG);
+
+7. 
+
+![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar9.JPG);
+
+### Server
+1. Import library pickle dan tambahkan fungsi-fungsi sebagai converter.
+
+![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar10.JPG);
+
+![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar11.JPG);
+
+![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar12.JPG);
+
+2. Buatlah fungsi multiplicative inverse untuk mencari nilai private key.
+
+![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar13.JPG);
+
+3. Buatlah fungsi untuk mendapatkan key-nya.
+
+![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar14.JPG);
+
+4. Buatlah fungsi untuk mengenkripsi dan mendekripsi pesan.
+
+![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar15.JPG);
+
+5. 
+
+![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar16.JPG);
+
+6. 
+
+![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar17.JPG);
+
+7. 
+
+![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar18.JPG);
