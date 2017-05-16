@@ -16,7 +16,7 @@ Langkah-langkah dalam mengenkripsi atau mendekripsi RSA adalah sebagai berikut :
 
 ## Hasil Implementasi
 ### Client
-1. Import library pickle dan tambahkan fungsi-fungsi sebagai converter.
+1. Import library pickle untuk mengirim dan menerima list. Tambahkan fungsi-fungsi sebagai converter.
 
 ![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar1.JPG);
 
@@ -36,15 +36,15 @@ Langkah-langkah dalam mengenkripsi atau mendekripsi RSA adalah sebagai berikut :
 
 ![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar6.JPG);
 
-5. 
+5. privateKeyD dan publicKeyD didapatkan dari hasil perhitungan get_key. Setelah mendapatkan perhitungan get_Key, lalu convert ke string agar public key bisa dikirim.
 
 ![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar7.JPG);
 
-6. 
+6. Setelah mengirim public key, pesan diubah ke ASCII agar bisa dienkripsi. Lalu, input pesannya. Variabel enk sebagai variabel untuk mengenkripsi pesan dengan memanggil fungsi encMessage. Hasil enkripsi disimpan di variabel data5. Kemudian, hasil data5 didekripsi menggunakan fungsi decMessage. 
 
 ![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar8.JPG);
 
-7. 
+7. Akhir dari client.
 
 ![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar9.JPG);
 
@@ -69,14 +69,14 @@ Langkah-langkah dalam mengenkripsi atau mendekripsi RSA adalah sebagai berikut :
 
 ![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar15.JPG);
 
-5. 
+5. privateKeyD dan publicKeyD didapatkan dari hasil perhitungan get_key. Setelah mendapatkan perhitungan get_Key, lalu convert ke string agar public key bisa dikirim.
 
 ![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar16.JPG);
 
-6. 
+6. Kemudian hasil dari data6 didekripsi menggunakan fungsi decMessage. Hasil dari dekripsi diprint. Ketika ingin menginput pesan lagi, maka pesan itu akan dienkripsi lagi.
 
 ![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar17.JPG);
 
-7. 
+7. Akhir dari server.
 
 ![alt_tag](https://github.com/niakurniam/KIJ-F/blob/master/Tugas%204%20-%20RSA/Screenshot/gambar18.JPG);
