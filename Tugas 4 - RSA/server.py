@@ -123,34 +123,48 @@ privateKeyD, publicKeyE = get_key(P_Value,Q_Value)
 print "Private D : ", privateKeyD
 print "Public E : ", publicKeyE
 satu=str(publicKeyE)
+type (publicKeyE)
 
 while True:
     # Wait for a connection
     print >>sys.stderr, 'waiting for a connection'
     connection, client_address = server_socket.accept()
     satu1=pickle.dumps(satu)
-    connection.sendall(satu1)
+    connection.send(satu1)
     
     try:
         print >> sys.stderr, 'connection from', client_address
         value=connection.recv(1024)
-        k = pickle.load(value)
-        print k
+        k = pickle.loads(value)
         #nvalue,key=str(value)
-        nvalue2 = 1
-        key2 = 1
+        #nvalue2 = ''
+        #key2 = ''
+        #for nvalue2, key2 in k.iteritems():
+        #    nvalue2, key2=k
+        x=len(k)
+        print 'ini x', x
+        t1 = k.strip('(')
+        t2= t1.strip(')')
+        t3=t2.strip(',')
+        print t3
+        T9 = map(int, t3)
+        nvalue2, key2 = T9
         print "nvalue client adalah: ", nvalue2
         print "public key client adalah: ", key2
         print "percakapan dimulai"
         # Receive the data in small chunks and retransmit it
         while True:
             data = connection.recv(1024)
-            print ('client: %s'% data)
+            terima = pickle.loads(data)
+            pesan = decMessage(terima, privateKeyD)
+            print ('client: %s'% pesan)
 
             data4 = raw_input('Me: ')
 
             if data4:
-                connection.sendall(data4)
+                enk = encMessage(data4, k)
+                kirim = pickle.dumps(enk)
+                connection.send(kirim)
                 #print >> sys.stderr, 'no more data from', client_address
 
 

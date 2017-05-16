@@ -127,14 +127,19 @@ while True:
     try:
         print >> sys.stderr, 'connection from', server_address
         value=client_socket.recv(1024)
-        k=pickle.load(value)
+        k=pickle.loads(value)
         satu1 = pickle.dumps(satu)
-        client_socket.sendall(satu1)
-        print k
+        client_socket.send(satu1)
+        #print "ini ",k
+        #nvalue2=''
+        #key2=''
+        #for nvalue2, key2 in k.iteritems():
+        #    nvalue2, key2=k
         #value2=int(value)
         #nvalue, key = value2
-        nvalue2=1
-        key2=1
+        t1=k.split('(',')')
+        T2 = map(int, t1)
+        nvalue2, key2 = T2
         print "nvalue server adalah: ", nvalue2
         print "public key server adalah: ", key2
         print "percakapan dimulai"
@@ -143,10 +148,13 @@ while True:
 
             data2 = raw_input('Me: ')
             if data2:
-
-                client_socket.sendall(data2)
+                enk = encMessage(data2, k)
+                kirim = pickle.dumps(enk)
+                client_socket.send(data2)
 
             data = client_socket.recv(1024)
+            terima = pickle.loads(data)
+            pesan = decMessage(terima, privateKeyD)
             print('server: %s'% data)
                 # print data
 
