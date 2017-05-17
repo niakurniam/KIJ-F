@@ -105,7 +105,7 @@ def decMessage(v_msg, v_d, v_n):
     return decString
 
 # create socket and connect to server
-server_address = ('localhost', 5000)
+server_address = ('10.151.44.50', 5000)
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client_socket.connect(server_address)
 
