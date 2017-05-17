@@ -106,51 +106,64 @@ def decMessage(v_msg, key):
     print "Result : ", decString
     return decString
 
-server_address = ('localhost', 5000)
-server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-server_socket.bind(server_address)
-server_socket.listen(2)
+# server_address = ('localhost', 5000)
+# server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+# server_socket.bind(server_address)
+# server_socket.listen(2)
 
-if (len(sys.argv) < 3):
-    print 'Usage : python server.py prime_number1 prime_number2'
-    sys.exit()
 
-P_Value = int(sys.argv[1])
-Q_Value = int(sys.argv[2])
+P_Value = int(raw_input("masukkan bilangan prima q (17, 19, 23): "))
+Q_Value = int(raw_input("Masukkan bilangan prima p harus berbeda dengan bilangan q: "))
+
+# P_Value = int(sys.argv[1])
+# Q_Value = int(sys.argv[2])
 #Find N Value
 privateKeyD, publicKeyE = get_key(P_Value,Q_Value)
 print "Private D : ", privateKeyD
 print "Public E : ", publicKeyE
-satu=str(publicKeyE)
+str1 = str(publicKeyE[0])
+str2 = str(publicKeyE[1])
+
+strr=(str1,str2)
 
 while True:
+    server_address = ('localhost', 7000)
+    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    server_socket.bind(server_address)
+    server_socket.listen(1)
+
     # Wait for a connection
     print >>sys.stderr, 'waiting for a connection'
     connection, client_address = server_socket.accept()
-    satu1=pickle.dumps(satu)
-    connection.sendall(satu1)
-    
+    satu1=pickle.dumps(strr)
+    connection.send(satu1)
+    value = connection.recv(1024)
+    cek = pickle.loads(value)
+
+    p1 = int(cek[0])
+    q1 = int(cek[1])
+
+    global publicc
+    publicc = (p1, q1)
+    print "nvalue server adalah: "
+    print "public key client adalah: ",publicc
+
     try:
-        print >> sys.stderr, 'connection from', client_address
-        value=connection.recv(1024)
-        k = pickle.load(value)
-        print k
-        #nvalue,key=str(value)
-        nvalue2 = 1
-        key2 = 1
-        print "nvalue client adalah: ", nvalue2
-        print "public key client adalah: ", key2
-        print "percakapan dimulai"
-        # Receive the data in small chunks and retransmit it
         while True:
+            print "percakapan dimulai"
             data = connection.recv(1024)
-            print ('client: %s'% data)
+            terima = pickle.loads(data)
+            pesan = decMessage(terima, privateKeyD)
+            print ('client: %s'% pesan)
 
             data4 = raw_input('Me: ')
 
             if data4:
-                connection.sendall(data4)
+                enk = encMessage(data4, k)
+                kirim = pickle.dumps(enk)
+                connection.send(kirim)
                 #print >> sys.stderr, 'no more data from', client_address
 
 

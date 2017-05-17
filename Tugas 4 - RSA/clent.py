@@ -107,46 +107,61 @@ def decMessage(v_msg, key):
     return decString
 
 # create socket and connect to server
-server_address = ('localhost', 5000)
-client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client_socket.connect(server_address)
+# server_address = ('localhost', 5000)
+# client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# client_socket.connect(server_address)
 
-if (len(sys.argv) < 3):
-    print 'Usage : python clent.py prime_number1 prime_number2'
-    sys.exit()
+P_Value = int(raw_input("masukkan bilangan prima q (17, 19, 23): "))
+Q_Value = int(raw_input("Masukkan bilangan prima p harus berbeda dengan bilangan q: "))
 
-P_Value = int(sys.argv[1])
-Q_Value = int(sys.argv[2])
+# P_Value = int(sys.argv[1])
+# Q_Value = int(sys.argv[2])
 #Find N Value
 privateKeyD, publicKeyE = get_key(P_Value,Q_Value)
 print "Private D : ", privateKeyD
 print "Public E : ", publicKeyE
-satu=str(publicKeyE)
+str1 = str(publicKeyE[0])
+str2 = str(publicKeyE[1])
+satu=(str1,str2)
 while True:
 
     try:
+        server_address = ('127.0.0.1', 7000)
+        client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        client_socket.connect(server_address)
         print >> sys.stderr, 'connection from', server_address
         value=client_socket.recv(1024)
-        k=pickle.load(value)
+        k=pickle.loads(value)
         satu1 = pickle.dumps(satu)
-        client_socket.sendall(satu1)
-        print k
+        client_socket.send(satu1)
+        #print "ini ",k
+        #nvalue2=''
+        #key2=''
+        #for nvalue2, key2 in k.iteritems():
+        #    nvalue2, key2=k
         #value2=int(value)
         #nvalue, key = value2
-        nvalue2=1
-        key2=1
-        print "nvalue server adalah: ", nvalue2
-        print "public key server adalah: ", key2
+
+        p1 = int(k[0])
+        q1 = int(k[1])
+
+        global publicc
+        publicc = (p1, q1)
+        # print "nvalue server adalah: ", auths
+        print "public key server adalah: ", publicc
         print "percakapan dimulai"
         # Receive the data in small chunks and retransmit it
         while True:
 
             data2 = raw_input('Me: ')
             if data2:
-
-                client_socket.sendall(data2)
+                enk = encMessage(data2, k)
+                kirim = pickle.dumps(enk)
+                client_socket.send(data2)
 
             data = client_socket.recv(1024)
+            terima = pickle.loads(data)
+            pesan = decMessage(terima, privateKeyD)
             print('server: %s'% data)
                 # print data
 
